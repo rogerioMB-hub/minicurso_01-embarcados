@@ -5,6 +5,8 @@ title: Início
 
 # Sistemas Embarcados — Lógica Digital com ESP32
 
+![Banner do curso](./assets/banner.svg)
+
 > Mini curso para o **Curso Técnico em Automação Industrial**  
 > Plataforma: ESP32 com MicroPython · Simulador: [Wokwi](https://wokwi.com)
 
