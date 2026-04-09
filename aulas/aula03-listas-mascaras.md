@@ -73,6 +73,10 @@ GPIO18 ──► R220 ──► LED3 ──► GND   (bit 3, mais significativo)
 
 ## 3. Código
 
+> **Nota:** o código desta aula usa funções definidas com `def`. Se esse conceito
+> ainda não é familiar, leia a [Aula 3 — Extra: Funções em MicroPython](./aula03-extra-funcoes.md)
+> antes de continuar — ela é curta e vai deixar o código abaixo completamente claro.
+
 ### Parte A — escrevendo um padrão binário nos LEDs
 
 ```python
