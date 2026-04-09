@@ -25,6 +25,9 @@ O objetivo é construir uma base sólida que conecte os conceitos teóricos de *
 | [1](./aulas/aula01-leitura-escrita-digital) | Leitura e escrita digital | — | LED controlado por botão |
 | [2](./aulas/aula02-operadores-bitwise) | Primeiro operador bitwise em hardware | `&` `\|` `~` | LED responde a 2 botões |
 | [3](./aulas/aula03-listas-mascaras) | Listas de pinos e máscara de bits | `&` `\|` com máscara | Banco de 4 LEDs por byte |
+| [3 ★](./aulas/aula03-extra-funcoes) | **Extra:** Funções em MicroPython | — | Apoio para a Aula 3 |
+
+> ★ Aula de apoio — leia antes da Aula 3 se o uso de `def` ainda não for familiar.
 | [4](./aulas/aula04-deslocamento-escrita-porta) | Deslocamento e escrita direta em porta | `<<` `>>` `mem32` | Sequenciador de LEDs |
 | [5](./aulas/aula05-flags-estados) | Flags e máquina de estados | `&=` `\|=` `^=` | Sistema com estados visuais |
 | [6](./aulas/aula06-uart-bytes) | Bytes pela UART | todos | Protocolo de comando por byte |
