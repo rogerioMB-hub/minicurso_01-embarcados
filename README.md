@@ -47,12 +47,12 @@ minicurso-embarcados/
 
 | # | Título | Operadores | Entregável |
 |---|--------|------------|------------|
-| 1 | Leitura e escrita digital | — | LED controlado por botão |
-| 2 | Primeiro operador bitwise em hardware | `&` `\|` `~` | LED responde a combinação de 2 botões |
-| 3 | Listas de pinos e máscara de bits | `&` `\|` com máscara | Banco de 4 LEDs controlado por byte |
-| 4 | Deslocamento e escrita direta em porta | `<<` `>>` `mem32` | Sequenciador de LEDs |
-| 5 | Flags e máquina de estados | `&=` `\|=` `^=` `~` | Sistema com estados visuais |
-| 6 | Bytes pela UART | todos | Protocolo de comando por byte |
+| [1](./aulas/aula01-leitura-escrita-digital.md) | Leitura e escrita digital | — | LED controlado por botão |
+| [2](./aulas/aula02-operadores-bitwise.md) | Primeiro operador bitwise em hardware | `&` `\|` `~` | LED responde a combinação de 2 botões |
+| [3](./aulas/aula03-listas-mascaras.md) | Listas de pinos e máscara de bits | `&` `\|` com máscara | Banco de 4 LEDs controlado por byte |
+| [4](./aulas/aula04-deslocamento-escrita-porta.md) | Deslocamento e escrita direta em porta | `<<` `>>` `mem32` | Sequenciador de LEDs |
+| [5](./aulas/aula05-flags-estados.md) | Flags e máquina de estados | `&=` `\|=` `^=` `~` | Sistema com estados visuais |
+| [6](./aulas/aula06-uart-bytes.md) | Bytes pela UART | todos | Protocolo de comando por byte |
 
 ---
 
