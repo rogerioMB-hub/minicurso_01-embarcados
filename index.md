@@ -58,7 +58,7 @@ Saber criar um projeto no Wokwi com ESP32 e abrir o editor MicroPython.
 O código-fonte deste material está disponível no GitHub e pode ser clonado ou baixado:
 
 ```
-git clone https://github.com/seu-usuario/minicurso-embarcados.git
+git clone https://github.com/rogerioMB-hub/minicurso-embarcados.git
 ```
 
 Contribuições e correções são bem-vindas via *Issues* ou *Pull Requests*.
