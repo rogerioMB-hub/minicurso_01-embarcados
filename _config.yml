@@ -4,7 +4,7 @@ description: "Mini curso 01 para o Curso Técnico em Automação Industrial. Do 
 theme: jekyll-theme-cayman
 
 # URL base — substitua pelo seu usuário do GitHub
-baseurl: "/minicurso_01_embarcados"
+baseurl: "/minicurso_01-embarcados"
 url: "https://rogerioMB-hub.github.io"
 
 # Navegação entre páginas
