@@ -137,6 +137,10 @@ print("Aguardando bytes pela UART (baud=9600)...")
 print("No terminal Wokwi, envie um byte em hexadecimal.")
 print("Exemplos: 0x15 (cmd=1, val=5)  0x2F (cmd=2, val=15)  0x00 (reset)")
 
+"""
+# -------------------------------------------
+# Caso não utilize Wokwi, use o código abaixo
+# -------------------------------------------
 while True:
     if uart.any():
         dado = uart.read(1)
@@ -144,6 +148,17 @@ while True:
             byte = dado[0]
             processar_byte(byte)
     time.sleep(0.05)
+"""
+# -------------------------------------------
+# Senão, use input() para que o programa funcione no simulador
+# -------------------------------------------
+dado=input("Enter com byte em hexadecimal:")
+if dado:
+  byte = int(dado)
+  print(dado, byte)
+  processar_byte(byte)
+time.sleep(.05)
+
 ```
 
 ---
