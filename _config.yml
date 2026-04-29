@@ -32,4 +32,4 @@ rouge:
 # Exclui arquivos que não devem virar páginas web
 exclude:
   - "*.zip"
-  - "{aulas,assets}"
+  - COMO-PUBLICAR.md
