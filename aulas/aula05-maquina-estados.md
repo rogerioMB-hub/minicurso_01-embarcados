@@ -326,7 +326,8 @@ Cole o conteúdo abaixo no arquivo `diagram.json` do seu projeto Wokwi (sempre c
     [ "rr:1", "esp:D5", "red", [ "v9.6", "h-124.8", "v-76.8", "v4.9" ] ],
     [ "esp:GND.2", "led_r:C", "black", [ "h-24.2", "v-168.2", "h355.2", "v86.4", "h9.6" ] ],
     [ "led_a:C", "esp:GND.2", "black", [ "v19.2", "h-9.2", "v-86.4", "h-316.8", "v19.2" ] ],
-    [ "led_v:C", "esp:GND.2", "black", [ "v19.2", "h-9.2", "v-86.4", "h-278.4", "v163.2", "v5" ] ]
+    [ "led_v:C", "esp:GND.2", "black", [ "v19.2", "h-9.2", "v-86.4", "h-278.4", "v163.2", "v5" ] ],
+    [ "esp:D13", "rpd:1", "blue", [ "h-53", "v110.1", "h220.8" ] ]
   ],
   "dependencies": {}
 }
