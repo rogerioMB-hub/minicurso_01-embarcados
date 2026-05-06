@@ -117,27 +117,68 @@ GPIO 27 ──► R220 ──► LED3 ──► GND   (bit 3)
     {
       "type": "board-esp32-devkit-c-v4",
       "id": "esp",
-      "top": 0, "left": 0,
+      "top": 0,
+      "left": 0,
       "attrs": { "env": "micropython-20231227-v1.22.0" }
     },
-    { "type": "wokwi-led", "id": "led0", "top": 20,  "left": 220, "attrs": { "color": "red"    } },
-    { "type": "wokwi-led", "id": "led1", "top": 20,  "left": 258, "attrs": { "color": "yellow" } },
-    { "type": "wokwi-led", "id": "led2", "top": 20,  "left": 296, "attrs": { "color": "green"  } },
-    { "type": "wokwi-led", "id": "led3", "top": 20,  "left": 334, "attrs": { "color": "blue"   } },
-    { "type": "wokwi-resistor", "id": "r0", "top": 100, "left": 215, "rotate": 90, "attrs": { "value": "220" } },
-    { "type": "wokwi-resistor", "id": "r1", "top": 100, "left": 253, "rotate": 90, "attrs": { "value": "220" } },
-    { "type": "wokwi-resistor", "id": "r2", "top": 100, "left": 291, "rotate": 90, "attrs": { "value": "220" } },
-    { "type": "wokwi-resistor", "id": "r3", "top": 100, "left": 329, "rotate": 90, "attrs": { "value": "220" } }
+    { "type": "wokwi-led", "id": "led0", "top": 20, "left": 220, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led1", "top": 20, "left": 258, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-led", "id": "led2", "top": 20, "left": 296, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led3", "top": 20, "left": 334, "attrs": { "color": "blue" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r0",
+      "top": 100,
+      "left": 215,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 100,
+      "left": 253,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 100,
+      "left": 291,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 100,
+      "left": 329,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
   ],
   "connections": [
-    [ "esp:TX",  "$serialMonitor:RX", "", [] ],
-    [ "esp:RX",  "$serialMonitor:TX", "", [] ],
-    [ "esp:4",   "esp:16",  "green",  [ "h20", "v-10" ] ],
-    [ "esp:17",  "esp:5",   "green",  [ "h20", "v-10" ] ],
-    [ "esp:2",   "r0:2",    "red",    [] ], [ "r0:1", "led0:A", "red",    [] ], [ "led0:K", "esp:GND.1", "black", [] ],
-    [ "esp:12",  "r1:2",    "yellow", [] ], [ "r1:1", "led1:A", "yellow", [] ], [ "led1:K", "esp:GND.1", "black", [] ],
-    [ "esp:14",  "r2:2",    "green",  [] ], [ "r2:1", "led2:A", "green",  [] ], [ "led2:K", "esp:GND.1", "black", [] ],
-    [ "esp:27",  "r3:2",    "blue",   [] ], [ "r3:1", "led3:A", "blue",   [] ], [ "led3:K", "esp:GND.1", "black", [] ]
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:4", "esp:16", "green", [ "h20", "v-10" ] ],
+    [ "esp:17", "esp:5", "green", [ "h20", "v-10" ] ],
+    [ "esp:2", "r0:2", "red", [] ],
+    [ "r0:1", "led0:A", "red", [] ],
+    [ "led0:K", "esp:GND.1", "black", [] ],
+    [ "esp:12", "r1:2", "yellow", [ "h-23.81", "v105.6", "h301.55" ] ],
+    [ "r1:1", "led1:A", "yellow", [] ],
+    [ "led1:K", "esp:GND.1", "black", [] ],
+    [ "esp:14", "r2:2", "green", [ "h-33.41", "v124.8", "h349.15" ] ],
+    [ "r2:1", "led2:A", "green", [] ],
+    [ "led2:K", "esp:GND.1", "black", [] ],
+    [ "esp:27", "r3:2", "blue", [ "h-43.01", "v144", "h396.75" ] ],
+    [ "r3:1", "led3:A", "blue", [] ],
+    [ "led3:K", "esp:GND.1", "black", [] ],
+    [ "esp:GND.3", "led0:C", "black", [ "h0" ] ],
+    [ "esp:GND.3", "led1:C", "black", [ "h120.04", "v-86.4", "h38.4", "v86.4", "h13.8" ] ],
+    [ "esp:GND.3", "led2:C", "black", [ "h120.04", "v-86.4", "h76.8", "v86.4", "h13.4" ] ],
+    [ "esp:GND.3", "led3:C", "black", [ "h120.04", "v-86.4", "h115.2", "v86.4", "h13" ] ]
   ],
   "dependencies": {}
 }
