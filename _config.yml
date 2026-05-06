@@ -1,11 +1,10 @@
 title: "Sistemas Embarcados — Lógica Digital com ESP32"
-description: "Mini curso 01 para o Curso Técnico em Automação Industrial. Do bit ao byte — operadores bitwise, máscaras, flags e UART com ESP32 e MicroPython."
+description: "Mini curso para o Curso Técnico em Automação Industrial. Do bit ao byte — operadores bitwise, máscaras, flags e UART com ESP32 e MicroPython."
 
 theme: jekyll-theme-cayman
 
-# URL base — substitua pelo seu usuário do GitHub
 baseurl: "/minicurso_01-embarcados"
-url: "https://rogerioMB-hub.github.io"
+url: "https://rogeriomb-hub.github.io"
 
 # Navegação entre páginas
 header_pages:
@@ -13,9 +12,12 @@ header_pages:
   - aulas/aula01-leitura-escrita-digital.md
   - aulas/aula02-operadores-bitwise.md
   - aulas/aula03-listas-mascaras.md
+  - aulas/aula03-extra-funcoes.md
   - aulas/aula04-deslocamento-escrita-porta.md
-  - aulas/aula05-flags-estados.md
-  - aulas/aula06-uart-bytes.md
+  - aulas/aula05-maquina-estados.md
+  - aulas/aula06-flags-maquina-lavar.md
+  - aulas/aula07-uart-primeiros-bytes.md
+  - aulas/aula08-uart-nibbles.md
 
 # Configurações gerais
 markdown: kramdown
@@ -25,11 +27,10 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# Destaque de sintaxe de código
 rouge:
   wrap: true
 
-# Exclui arquivos que não devem virar páginas web
 exclude:
   - "*.zip"
   - COMO-PUBLICAR.md
+  - GUIA-CONSTRUCAO.md
