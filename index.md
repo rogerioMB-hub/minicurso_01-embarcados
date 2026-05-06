@@ -5,9 +5,9 @@ title: Início
 
 # Sistemas Embarcados — Lógica Digital com ESP32
 
-![Banner do curso](./assets/banner.png)
+![Banner do curso](https://rogeriomb-hub.github.io/minicurso_01-embarcados/assets/banner.png)
 
-> Mini curso para o **Curso Técnico em Automação Industrial**
+> Mini curso para o **Curso Técnico em Automação Industrial**  
 > Plataforma: ESP32 com MicroPython · Simulador: [Wokwi](https://wokwi.com)
 
 ---
@@ -24,15 +24,15 @@ O objetivo é construir uma base sólida que conecte os conceitos teóricos de *
 
 | # | Título | Operadores | Entregável |
 |---|--------|------------|------------|
-| [1](./aulas/aula01-leitura-escrita-digital) | Leitura e escrita digital | — | LED controlado por botão |
-| [2](./aulas/aula02-operadores-bitwise) | Primeiro operador bitwise em hardware | `&` `\|` `~` | LED responde a 2 botões |
-| [3](./aulas/aula03-listas-mascaras) | Listas de pinos e máscara de bits | `&` `\|` com máscara | Banco de 4 LEDs por byte |
-| [3 ★](./aulas/aula03-extra-funcoes) | **Extra:** Funções em MicroPython | — | Apoio opcional para a Aula 3 |
-| [4](./aulas/aula04-deslocamento-escrita-porta) | Deslocamento e escrita direta em porta | `<<` `>>` `mem32` | Sequenciador de LEDs |
-| [5](./aulas/aula05-maquina-estados) | Máquinas de estados: do diagrama ao código | — | Semáforo com 3 estados |
-| [6](./aulas/aula06-flags-maquina-lavar) | Flags na prática: máquina de lavar | `\|=` `&=~` `^=` `&` | Sistema com 4 flags simultâneas |
-| [7](./aulas/aula07-uart-primeiros-bytes) | UART: primeiros bytes | — | LED controlado via serial |
-| [8](./aulas/aula08-uart-nibbles) | UART: protocolo de nibbles | `>>` `&` | Comando + argumento em um byte |
+| [1](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula01-leitura-escrita-digital) | Leitura e escrita digital | — | LED controlado por botão |
+| [2](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula02-operadores-bitwise) | Primeiro operador bitwise em hardware | `&` `\|` `~` | LED responde a 2 botões |
+| [3](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula03-listas-mascaras) | Listas de pinos e máscara de bits | `&` `\|` com máscara | Banco de 4 LEDs por byte |
+| [3 ★](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula03-extra-funcoes) | **Extra:** Funções em MicroPython | — | Apoio opcional para a Aula 3 |
+| [4](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula04-deslocamento-escrita-porta) | Deslocamento e escrita direta em porta | `<<` `>>` `mem32` | Sequenciador de LEDs |
+| [5](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula05-maquina-estados) | Máquinas de estados: do diagrama ao código | — | Semáforo com 3 estados |
+| [6](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula06-flags-maquina-lavar) | Flags na prática: máquina de lavar | `\|=` `&=~` `^=` `&` | Sistema com 4 flags simultâneas |
+| [7](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula07-uart-primeiros-bytes) | UART: primeiros bytes | — | LED controlado via serial |
+| [8](https://rogeriomb-hub.github.io/minicurso_01-embarcados/aulas/aula08-uart-nibbles) | UART: protocolo de nibbles | `>>` `&` | Comando + argumento em um byte |
 
 > ★ Aula de apoio — leia antes da Aula 3 se o uso de `def` ainda não for familiar.
 
@@ -58,10 +58,6 @@ Saber criar um projeto no Wokwi com ESP32 e abrir o editor MicroPython.
 
 ## Repositório
 
-O código-fonte deste material está disponível no GitHub e pode ser clonado ou baixado:
+O código-fonte deste material está disponível no GitHub:
 
-```
-git clone https://github.com/seu-usuario/minicurso_01-embarcados.git
-```
-
-Contribuições e correções são bem-vindas via *Issues* ou *Pull Requests*.
+[https://github.com/rogerioMB-hub/minicurso_01-embarcados](https://github.com/rogerioMB-hub/minicurso_01-embarcados)
