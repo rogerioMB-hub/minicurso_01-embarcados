@@ -46,7 +46,7 @@ O objetivo é construir uma base sólida que conecte os conceitos teóricos de *
 4. Responda as perguntas da seção **Experimento** no seu caderno
 5. Tente o **Desafio** antes de avançar para a próxima aula
 
-> Os templates de circuito prontos para o Wokwi estão em [assets/wokwi-links](https://rogeriomb-hub.github.io/minicurso-embarcados/assets/wokwi-links).
+> Os templates de circuito prontos para o Wokwi estão em [assets/wokwi-links](https://rogeriomb-hub.github.io/minicurso_01-embarcados/assets/wokwi-links).
 
 ---
 
