@@ -70,16 +70,16 @@ Você já conhece o semáforo. Agora vamos lê-lo como máquina de estados:
 
 ```
         ┌─────────────────────────────────────────┐
-        │              [btn pressionado]           │
-        │                                          │
-        ▼                                          │
+        │              [btn pressionado]          │
+        │                                         │
+        ▼                                         │
   ┌───────────┐   [2 segundos]   ┌────────────┐   │
   │  VERMELHO │                  │   AMARELO  │   │
   │  LED: ●   │                  │  LED: ●    │   │
   └───────────┘                  └────────────┘   │
-        │                              ▲           │
-        │   [btn pressionado]          │           │
-        │                    [2 seg]   │           │
+        │                             ▲           │
+        │   [btn pressionado]         │           │
+        │                    [2 seg]  │           │
         ▼                             │           │
   ┌───────────┐ ──────────────────────┘           │
   │   VERDE   │                                   │
@@ -253,31 +253,80 @@ while True:
 
 ## 5. Circuito Wokwi — diagram.json
 
-Cole o conteúdo abaixo no arquivo `diagram.json` do seu projeto Wokwi:
+Cole o conteúdo abaixo no arquivo `diagram.json` do seu projeto Wokwi (sempre confira se está correto):
 
 ```json
 {
   "version": 1,
-  "author": "Mini Curso Embarcados — Aula 5",
+  "author": "RMB - Mini Curso Embarcados — Aula 5",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0,   "left": 0,   "attrs": {} },
-    { "type": "wokwi-led", "id": "led_v", "top": 80,  "left": 250, "attrs": { "color": "green"  } },
-    { "type": "wokwi-led", "id": "led_a", "top": 80,  "left": 290, "attrs": { "color": "yellow" } },
-    { "type": "wokwi-led", "id": "led_r", "top": 80,  "left": 330, "attrs": { "color": "red"    } },
-    { "type": "wokwi-resistor", "id": "rv", "top": 120, "left": 250, "attrs": { "value": "220" } },
-    { "type": "wokwi-resistor", "id": "ra", "top": 120, "left": 290, "attrs": { "value": "220" } },
-    { "type": "wokwi-resistor", "id": "rr", "top": 120, "left": 330, "attrs": { "value": "220" } },
-    { "type": "wokwi-pushbutton", "id": "btn", "top": 180, "left": 270, "attrs": {} },
-    { "type": "wokwi-resistor",   "id": "rpd", "top": 220, "left": 270, "attrs": { "value": "10000" } }
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led_v", "top": 6, "left": 253.4, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-led",
+      "id": "led_a",
+      "top": 6,
+      "left": 291.8,
+      "attrs": { "color": "yellow" }
+    },
+    { "type": "wokwi-led", "id": "led_r", "top": 6, "left": 330.2, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "rv",
+      "top": 89.8,
+      "left": 248.75,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "ra",
+      "top": 99.4,
+      "left": 287.15,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rr",
+      "top": 118.6,
+      "left": 325.55,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-pushbutton", "id": "btn", "top": 179, "left": 230.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "rpd",
+      "top": 147.4,
+      "left": 143.15,
+      "rotate": 270,
+      "attrs": { "value": "10000" }
+    }
   ],
   "connections": [
-    ["esp:2",  "rv:1", "green",  []], ["rv:2", "led_v:A", "green",  []], ["led_v:K", "esp:GND.1", "black", []],
-    ["esp:4",  "ra:1", "yellow", []], ["ra:2", "led_a:A", "yellow", []], ["led_a:K", "esp:GND.1", "black", []],
-    ["esp:5",  "rr:1", "red",    []], ["rr:2", "led_r:A", "red",    []], ["led_r:K", "esp:GND.1", "black", []],
-    ["esp:13", "btn:1.l", "blue", []], ["btn:2.l", "esp:3V3", "red", []],
-    ["btn:1.l", "rpd:1", "blue", []], ["rpd:2", "esp:GND.1", "black", []]
-  ]
+    [ "esp:2", "rv:1", "green", [] ],
+    [ "rv:2", "led_v:A", "green", [] ],
+    [ "led_v:K", "esp:GND.1", "black", [] ],
+    [ "esp:4", "ra:1", "yellow", [] ],
+    [ "ra:2", "led_a:A", "yellow", [] ],
+    [ "led_a:K", "esp:GND.1", "black", [] ],
+    [ "esp:5", "rr:1", "red", [] ],
+    [ "rr:2", "led_r:A", "red", [] ],
+    [ "led_r:K", "esp:GND.1", "black", [] ],
+    [ "esp:13", "btn:1.l", "blue", [] ],
+    [ "btn:2.l", "esp:3V3", "red", [ "h-96", "v-39.2", "h-33.1" ] ],
+    [ "btn:1.l", "rpd:1", "blue", [] ],
+    [ "rpd:2", "esp:GND.1", "black", [ "v-8.4", "h-19.2", "v33.8" ] ],
+    [ "rv:1", "esp:D2", "green", [ "v19.2", "h-28.8", "v-67.2", "h-115.2", "v53.6" ] ],
+    [ "ra:1", "esp:D4", "gold", [ "v19.2", "h-76.8", "v-48", "h-115.2", "v14.4" ] ],
+    [ "rr:1", "esp:D5", "red", [ "v9.6", "h-124.8", "v-76.8", "v4.9" ] ],
+    [ "esp:GND.2", "led_r:C", "black", [ "h-24.2", "v-168.2", "h355.2", "v86.4", "h9.6" ] ],
+    [ "led_a:C", "esp:GND.2", "black", [ "v19.2", "h-9.2", "v-86.4", "h-316.8", "v19.2" ] ],
+    [ "led_v:C", "esp:GND.2", "black", [ "v19.2", "h-9.2", "v-86.4", "h-278.4", "v163.2", "v5" ] ]
+  ],
+  "dependencies": {}
 }
 ```
 
