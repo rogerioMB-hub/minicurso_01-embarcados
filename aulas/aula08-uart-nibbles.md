@@ -185,7 +185,8 @@ GPIO 27 ──► R220 ──► LED3 ──► GND   (bit 3)
 ```
 
 > **Atenção:** este `diagram.json` é uma sugestão de ponto de partida.
-> Valide e ajuste as conexões no Wokwi antes de usar com os alunos.
+> Valide e ajuste as conexões no Wokwi antes de usar.
+> Sugestão de link: https://wokwi.com/projects/463314314330790913
 
 ---
 
