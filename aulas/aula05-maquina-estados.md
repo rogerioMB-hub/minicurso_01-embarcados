@@ -422,4 +422,4 @@ elif estado == EMERGENCIA:
 
 ---
 
-*← [Aula 4](./aula04-deslocamento-escrita-porta.md) | Próxima → [Aula 6: Flags e Controle de Estado](./aula06-flags-controle.md)*
+*← [Aula 4](./aula04-deslocamento-escrita-porta.md) | Próxima → [Aula 6: Flags na Prática — Máquina de Lavar](./aula06-flags-maquina-lavar.md)*

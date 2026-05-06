@@ -380,4 +380,4 @@ elif dado == b'\x02':
 
 ---
 
-*← [Aula 6](./aula06-flags-controle.md) | Próxima → [Aula 8: UART com Protocolo de Nibbles](./aula08-uart-nibbles.md)*
+*← [Aula 6](./aula06-flags-maquina-lavar.md) | Próxima → [Aula 8: UART com Protocolo de Nibbles](./aula08-uart-nibbles.md)*
