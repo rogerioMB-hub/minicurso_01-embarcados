@@ -57,7 +57,9 @@ Exemplo mínimo — uma lâmpada:
 ```
           [btn]           [btn]
    ──►  APAGADA  ──────►  ACESA
-              ◄──────
+      ▲                     |
+      |                     |
+       ─────────────────────
 ```
 
 Apenas dois estados, uma condição para cada sentido. Simples — mas já é uma máquina de estados completa.
