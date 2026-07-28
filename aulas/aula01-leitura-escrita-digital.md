@@ -59,6 +59,8 @@ ESP32 GPIO4  ──► Resistor 10kΩ ──► GND   (pull-down)
 > O resistor de 10 kΩ garante que o pino leia `0` quando o botão não está pressionado,
 > evitando leituras flutuantes.
 
+*Link do Wokwi → [Minicurso 01 - aula 01-wokwi-botão e led](https://wokwi.com/projects/470798465049406465)*
+
 ---
 
 ## 3. Código
