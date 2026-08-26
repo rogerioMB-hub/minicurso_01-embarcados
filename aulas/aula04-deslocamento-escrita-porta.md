@@ -64,6 +64,14 @@ Cada bit da `palavra` corresponde a um GPIO de mesmo índice. Bit 2 → GPIO2, b
 Mesmo circuito da Aula 3 — 4 LEDs nos GPIOs 2, 4, 5 e 18.
 
 > **Atenção:** na escrita direta via `mem32`, os bits devem corresponder exatamente aos números dos GPIOs. GPIO2 = bit 2, GPIO4 = bit 4, GPIO5 = bit 5, GPIO18 = bit 18 da palavra de 32 bits.
+---
+
+### Funcionamento do sequenciador
+
+A animação abaixo mostra como a instrução `1 << pos` desloca o bit `1`,
+ativando sequencialmente os GPIOs 2, 4, 5 e 18.
+
+![Animação do sequenciador em MicroPython](assets/sequenciador_esp32.gif)
 
 ---
 
