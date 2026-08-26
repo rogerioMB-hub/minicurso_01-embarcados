@@ -72,7 +72,7 @@ Mesmo circuito da Aula 3 — 4 LEDs nos GPIOs 2, 4, 5 e 18.
 A animação abaixo mostra como a instrução `1 << pos` desloca o bit `1`,
 ativando sequencialmente os GPIOs 2, 4, 5 e 18.
 
-![Animação do sequenciador em MicroPython](./assets/sequenciador_esp32.gif)
+![Animação do sequenciador em MicroPython](../assets/sequenciador_esp32.gif)
 
 ---
 
