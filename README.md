@@ -39,7 +39,7 @@ minicurso_01-embarcados/
 │   ├── aula01-leitura-escrita-digital.md
 │   ├── aula02-operadores-bitwise.md
 │   ├── aula03-listas-mascaras.md
-│   ├── aula03-extra-funcoes.md        ← apoio opcional
+│   ├── aula03-extra-funcoes.md                ← apoio opcional
 │   ├── aula04-deslocamento-escrita-porta.md
 │   ├── aula05-maquina-estados.md
 │   ├── aula06-flags-maquina-lavar.md
@@ -48,15 +48,15 @@ minicurso_01-embarcados/
 └── assets/
     ├── banner.png
     ├── banner.svg
-    ├── diagrama_or_bit_a_bit.svg          ← Aula 4: OR bit a bit
-    ├── escrever_palavra_0b1010.svg         ← Aula 3: panorama bit→LED
-    ├── escrever_palavra_4_iteracoes.svg    ← Aula 3: 4 iterações lado a lado
+    ├── diagrama_or_bit_a_bit.svg              ← Aula 4: OR bit a bit
+    ├── escrever_palavra_0b1010.svg            ← Aula 3: panorama bit→LED
+    ├── escrever_palavra_4_iteracoes.svg       ← Aula 3: 4 iterações lado a lado
     ├── escrever_palavra_i1_passo_a_passo.svg  ← Aula 3: detalhe iteração i=1
-    ├── esp32_loopback_aula7.jpg            ← Aula 7: circuito loopback físico
-    ├── grafo-maquina-lavar.png             ← Aula 6: diagrama de estados
-    ├── registrador_gpio_out_esp32_leds.svg ← Aula 4: registrador GPIO_OUT
-    ├── sequenciador_esp32.gif              ← Aula 4: animação sequenciador
-    └── wokwi-links.md                      ← templates e links Wokwi por aula
+    ├── esp32_loopback_aula7.jpg               ← Aula 7: circuito loopback físico
+    ├── grafo-maquina-lavar.png                ← Aula 6: diagrama de estados
+    ├── registrador_gpio_out_esp32_leds.svg    ← Aula 4: registrador GPIO_OUT
+    ├── sequenciador_esp32.gif                 ← Aula 4: animação sequenciador
+    └── wokwi-links.md                         ← templates e links Wokwi por aula
 ```
 
 ---
