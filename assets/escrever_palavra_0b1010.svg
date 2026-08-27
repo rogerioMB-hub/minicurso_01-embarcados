@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">escrever_palavra(0b1010) — execução passo a passo</title>
+  <desc id="desc">Os bits 3 a 0 da palavra 1010 são associados pelos índices 3 a 0 aos GPIOs 18, 5, 4 e 2. Os LEDs dos GPIOs 18 e 4 acendem.</desc>
+  <defs>
+    <style>
+      .mono { font-family: "JetBrains Mono", "DejaVu Sans Mono", Consolas, monospace; }
+      .sans { font-family: Inter, Arial, sans-serif; }
+      .heading { font-size: 22px; font-weight: 700; fill: #172033; }
+      .column { font-size: 17px; font-weight: 700; fill: #334155; }
+      .bit-label { font-size: 13px; fill: #58667b; text-anchor: middle; }
+      .bit-value { font-size: 26px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .iteration { font-size: 15px; fill: #263247; text-anchor: middle; dominant-baseline: middle; }
+      .led-label { font-size: 15px; fill: #344156; dominant-baseline: middle; }
+      .legend { font-size: 14px; fill: #4d5a70; }
+    </style>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2e9d61"/>
+    </marker>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#9aa5b4"/>
+    </marker>
+    <linearGradient id="ledOn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#86efac"/><stop offset="45%" stop-color="#22c55e"/><stop offset="100%" stop-color="#087d37"/>
+    </linearGradient>
+    <linearGradient id="ledOff" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d9dee5"/><stop offset="55%" stop-color="#aab2bd"/><stop offset="100%" stop-color="#747e8b"/>
+    </linearGradient>
+    <filter id="greenGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="#ffffff"/>
+  <text x="600" y="52" class="mono heading" text-anchor="middle">escrever_palavra(0b1010) — execução passo a passo</text>
+
+  <text x="220" y="103" class="mono column" text-anchor="middle">Palavra: 0b1010</text>
+  <text x="600" y="103" class="mono column" text-anchor="middle">i / pino</text>
+  <text x="950" y="103" class="mono column" text-anchor="middle">LEDs</text>
+
+  <!-- guides -->
+  <line x1="375" y1="120" x2="375" y2="500" stroke="#e1e6ed"/>
+  <line x1="815" y1="120" x2="815" y2="500" stroke="#e1e6ed"/>
+
+  <!-- row 1: bit 3 -> i=3 -> LED3 / GPIO18, on -->
+  <text x="220" y="133" class="mono bit-label">bit 3</text>
+  <rect x="145" y="140" width="150" height="56" rx="9" fill="#dcf7e7" stroke="#31a365" stroke-width="2"/>
+  <text x="220" y="169" class="mono bit-value" fill="#155f39">1</text>
+  <path d="M295 168 H420" stroke="#2e9d61" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+  <rect x="430" y="140" width="340" height="56" rx="9" fill="#f6f8fb" stroke="#d5dce6"/>
+  <text x="600" y="169" class="mono iteration">i=3 → pinos[3] → GPIO18</text>
+  <path d="M770 168 H858" stroke="#2e9d61" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+  <g transform="translate(885 145)">
+    <circle cx="0" cy="17" r="19" fill="#4ade80" opacity=".16" filter="url(#greenGlow)"/>
+    <path d="M-6 35 V50 M6 35 V46" stroke="#87929e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-13 34 H13 L11 38 H-11 Z" fill="#087d37"/>
+    <path d="M-11 34 V17 A11 11 0 0 1 11 17 V34 Z" fill="url(#ledOn)" stroke="#087d37" stroke-width="1.5"/>
+    <path d="M-6 16 A7 7 0 0 1 4 10" fill="none" stroke="#ffffff" stroke-width="2" opacity=".85"/>
+  </g>
+  <text x="925" y="169" class="mono led-label">LED 3 — GPIO18</text>
+
+  <!-- row 2: bit 2 -> i=2 -> LED2 / GPIO5, off -->
+  <text x="220" y="223" class="mono bit-label">bit 2</text>
+  <rect x="145" y="230" width="150" height="56" rx="9" fill="#eef1f5" stroke="#c3cad4" stroke-width="2"/>
+  <text x="220" y="259" class="mono bit-value" fill="#707b89">0</text>
+  <path d="M295 258 H420" stroke="#9aa5b4" stroke-width="3" fill="none" marker-end="url(#arrowGray)"/>
+  <rect x="430" y="230" width="340" height="56" rx="9" fill="#f6f8fb" stroke="#d5dce6"/>
+  <text x="600" y="259" class="mono iteration">i=2 → pinos[2] → GPIO5</text>
+  <path d="M770 258 H858" stroke="#9aa5b4" stroke-width="3" fill="none" marker-end="url(#arrowGray)"/>
+  <g transform="translate(885 235)">
+    <path d="M-6 35 V50 M6 35 V46" stroke="#9aa3ad" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-13 34 H13 L11 38 H-11 Z" fill="#727b87"/>
+    <path d="M-11 34 V17 A11 11 0 0 1 11 17 V34 Z" fill="url(#ledOff)" stroke="#68727e" stroke-width="1.5"/>
+    <path d="M-6 16 A7 7 0 0 1 4 10" fill="none" stroke="#ffffff" stroke-width="2" opacity=".5"/>
+  </g>
+  <text x="925" y="259" class="mono led-label">LED 2 — GPIO5</text>
+
+  <!-- row 3: bit 1 -> i=1 -> LED1 / GPIO4, on -->
+  <text x="220" y="313" class="mono bit-label">bit 1</text>
+  <rect x="145" y="320" width="150" height="56" rx="9" fill="#dcf7e7" stroke="#31a365" stroke-width="2"/>
+  <text x="220" y="349" class="mono bit-value" fill="#155f39">1</text>
+  <path d="M295 348 H420" stroke="#2e9d61" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+  <rect x="430" y="320" width="340" height="56" rx="9" fill="#f6f8fb" stroke="#d5dce6"/>
+  <text x="600" y="349" class="mono iteration">i=1 → pinos[1] → GPIO4</text>
+  <path d="M770 348 H858" stroke="#2e9d61" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+  <g transform="translate(885 325)">
+    <circle cx="0" cy="17" r="19" fill="#4ade80" opacity=".16" filter="url(#greenGlow)"/>
+    <path d="M-6 35 V50 M6 35 V46" stroke="#87929e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-13 34 H13 L11 38 H-11 Z" fill="#087d37"/>
+    <path d="M-11 34 V17 A11 11 0 0 1 11 17 V34 Z" fill="url(#ledOn)" stroke="#087d37" stroke-width="1.5"/>
+    <path d="M-6 16 A7 7 0 0 1 4 10" fill="none" stroke="#ffffff" stroke-width="2" opacity=".85"/>
+  </g>
+  <text x="925" y="349" class="mono led-label">LED 1 — GPIO4</text>
+
+  <!-- row 4: bit 0 -> i=0 -> LED0 / GPIO2, off -->
+  <text x="220" y="403" class="mono bit-label">bit 0</text>
+  <rect x="145" y="410" width="150" height="56" rx="9" fill="#eef1f5" stroke="#c3cad4" stroke-width="2"/>
+  <text x="220" y="439" class="mono bit-value" fill="#707b89">0</text>
+  <path d="M295 438 H420" stroke="#9aa5b4" stroke-width="3" fill="none" marker-end="url(#arrowGray)"/>
+  <rect x="430" y="410" width="340" height="56" rx="9" fill="#f6f8fb" stroke="#d5dce6"/>
+  <text x="600" y="439" class="mono iteration">i=0 → pinos[0] → GPIO2</text>
+  <path d="M770 438 H858" stroke="#9aa5b4" stroke-width="3" fill="none" marker-end="url(#arrowGray)"/>
+  <g transform="translate(885 415)">
+    <path d="M-6 35 V50 M6 35 V46" stroke="#9aa3ad" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-13 34 H13 L11 38 H-11 Z" fill="#727b87"/>
+    <path d="M-11 34 V17 A11 11 0 0 1 11 17 V34 Z" fill="url(#ledOff)" stroke="#68727e" stroke-width="1.5"/>
+    <path d="M-6 16 A7 7 0 0 1 4 10" fill="none" stroke="#ffffff" stroke-width="2" opacity=".5"/>
+  </g>
+  <text x="925" y="439" class="mono led-label">LED 0 — GPIO2</text>
+
+  <!-- legend -->
+  <rect x="235" y="523" width="730" height="50" rx="10" fill="#f8fafc" stroke="#dce2ea"/>
+  <rect x="270" y="539" width="18" height="18" rx="4" fill="#dcf7e7" stroke="#31a365"/>
+  <text x="300" y="553" class="mono legend">verde = bit 1 (LED aceso)</text>
+  <line x1="590" y1="535" x2="590" y2="561" stroke="#d3dae4"/>
+  <rect x="625" y="539" width="18" height="18" rx="4" fill="#eef1f5" stroke="#c3cad4"/>
+  <text x="655" y="553" class="mono legend">cinza = bit 0 (LED apagado)</text>
+</svg>
