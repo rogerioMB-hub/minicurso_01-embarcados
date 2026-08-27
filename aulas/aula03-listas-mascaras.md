@@ -122,25 +122,35 @@ O índice `i` é exatamente o número do bit que queremos extrair da palavra naq
 
 #### O que `escrever_palavra()` faz — passo a passo
 
-A função recebe um número inteiro (`palavra`) e distribui seus bits pelos LEDs. Para cada iteração do `for`:
+A função recebe um número inteiro (`palavra`) e distribui seus bits pelos LEDs. A cada iteração do `for`, quatro passos acontecem em sequência:
 
-1. `i` indica qual bit extrair e qual pino usar
-2. `palavra >> i` desloca a palavra `i` posições para a direita, colocando o bit desejado na posição 0
-3. `& 1` isola esse bit (descarta todos os outros)
-4. `pino.value(bit)` aplica o resultado — `0` apaga o LED, `1` acende
+1. **`i` indica qual bit extrair e qual pino usar** — na iteração `i=0` usamos `pinos[0]` e extraímos o bit 0; na iteração `i=1` usamos `pinos[1]` e extraímos o bit 1, e assim por diante
+2. **`palavra >> i` desloca a palavra `i` posições para a direita** — o bit desejado "caminha" até a posição 0, onde pode ser lido facilmente
+3. **`& 1` isola o bit 0** — zera todos os outros bits, deixando apenas o valor do bit que interessa: `0` ou `1`
+4. **`pino.value(bit)` aplica o resultado** — `0` apaga o LED, `1` acende
 
-O diagrama abaixo mostra as quatro iterações para `palavra = 0b1010`:
+O diagrama abaixo detalha esses 4 passos para a iteração `i = 1` com `palavra = 0b1010` — o caso mais didático, pois o bit alvo não está nem no extremo esquerdo nem no direito:
 
-![escrever_palavra(0b1010) — execução passo a passo](../assets/escrever_palavra_0b1010.svg)
+![escrever_palavra — detalhe da iteração i=1](../assets/escrever_palavra_iter1.svg)
+
+Agora veja o mesmo processo acontecendo nas 4 iterações lado a lado — observe como o deslocamento e o resultado `& 1` mudam a cada coluna:
+
+![escrever_palavra(0b1010) — as 4 iterações](../assets/escrever_palavra_4iters.svg)
+
+E o panorama final — a correspondência entre cada bit da palavra, a iteração do `for` e o LED físico resultante:
+
+![escrever_palavra(0b1010) — panorama bit → iteração → LED](../assets/escrever_palavra_debug.svg)
+
+A tabela abaixo resume as 4 iterações em números:
 
 | Iteração `i` | `pino` | `palavra >> i` | `& 1` | `pino.value()` | LED |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| 0 | GPIO2 | `0b1010` | **0** | 0 | apagado |
-| 1 | GPIO4 | `0b0101` | **1** | 1 | **aceso** |
-| 2 | GPIO5 | `0b0010` | **0** | 0 | apagado |
+| 0 | GPIO2  | `0b1010` | **0** | 0 | apagado |
+| 1 | GPIO4  | `0b0101` | **1** | 1 | **aceso** |
+| 2 | GPIO5  | `0b0010` | **0** | 0 | apagado |
 | 3 | GPIO18 | `0b0001` | **1** | 1 | **aceso** |
 
-> **Resultado:** para `0b1010`, apenas LED1 (GPIO4) e LED3 (GPIO18) acendem. Cada iteração do `for` cuida de um único par bit↔LED, de forma independente.
+> **Resultado:** para `0b1010`, apenas LED1 (GPIO4) e LED3 (GPIO18) acendem. Cada iteração do `for` cuida de um único par bit↔LED, de forma completamente independente das outras.
 
 ---
 
