@@ -131,15 +131,15 @@ A função recebe um número inteiro (`palavra`) e distribui seus bits pelos LED
 
 O diagrama abaixo detalha esses 4 passos para a iteração `i = 1` com `palavra = 0b1010` — o caso mais didático, pois o bit alvo não está nem no extremo esquerdo nem no direito:
 
-![escrever_palavra — detalhe da iteração i=1](../assets/escrever_palavra_iter1.svg)
+![escrever_palavra — detalhe da iteração i=1](../assets/escrever_palavra_i1_passo_a_passo.svg)
 
 Agora veja o mesmo processo acontecendo nas 4 iterações lado a lado — observe como o deslocamento e o resultado `& 1` mudam a cada coluna:
 
-![escrever_palavra(0b1010) — as 4 iterações](../assets/escrever_palavra_4iters.svg)
+![escrever_palavra(0b1010) — as 4 iterações](../assets/escrever_palavra_4_iteracoes.svg)
 
 E o panorama final — a correspondência entre cada bit da palavra, a iteração do `for` e o LED físico resultante:
 
-![escrever_palavra(0b1010) — panorama bit → iteração → LED](../assets/escrever_palavra_debug.svg)
+![escrever_palavra(0b1010) — panorama bit → iteração → LED](../assets/escrever_palavra_0b1010.svg)
 
 A tabela abaixo resume as 4 iterações em números:
 
