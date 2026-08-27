@@ -131,7 +131,7 @@ A função recebe um número inteiro (`palavra`) e distribui seus bits pelos LED
 
 O diagrama abaixo mostra as quatro iterações para `palavra = 0b1010`:
 
-![escrever_palavra(0b1010) — execução passo a passo](../assets/escrever_palavra_debug.svg)
+![escrever_palavra(0b1010) — execução passo a passo](../assets/escrever_palavra_0b1010.svg)
 
 | Iteração `i` | `pino` | `palavra >> i` | `& 1` | `pino.value()` | LED |
 |:---:|:---:|:---:|:---:|:---:|:---:|
