@@ -197,4 +197,4 @@ mem32[GPIO_OUT] = mascara
 
 ---
 
-*← [Aula 3](./aula03-listas-mascaras.md) | Próxima → [Aula 5: Flags e Máquina de Estados](./aula05-flags-estados.md)*
+*← [Aula 3](./aula03-listas-mascaras.md) | Próxima → [Aula 5: Máquinas de Estados — Do Diagrama ao Código](./aula05-maquina-estados.md)*
