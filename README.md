@@ -30,7 +30,7 @@ O objetivo é construir uma base sólida que conecte os conceitos teóricos de *
 ## Estrutura do repositório
 
 ```
-minicurso-embarcados/
+minicurso_01-embarcados/
 ├── README.md
 ├── index.md
 ├── _config.yml
@@ -48,8 +48,15 @@ minicurso-embarcados/
 └── assets/
     ├── banner.png
     ├── banner.svg
-    ├── esp32_loopback_aula7.jpg
-    └── wokwi-links.md
+    ├── diagrama_or_bit_a_bit.svg          ← Aula 4: OR bit a bit
+    ├── escrever_palavra_0b1010.svg         ← Aula 3: panorama bit→LED
+    ├── escrever_palavra_4_iteracoes.svg    ← Aula 3: 4 iterações lado a lado
+    ├── escrever_palavra_i1_passo_a_passo.svg  ← Aula 3: detalhe iteração i=1
+    ├── esp32_loopback_aula7.jpg            ← Aula 7: circuito loopback físico
+    ├── grafo-maquina-lavar.png             ← Aula 6: diagrama de estados
+    ├── registrador_gpio_out_esp32_leds.svg ← Aula 4: registrador GPIO_OUT
+    ├── sequenciador_esp32.gif              ← Aula 4: animação sequenciador
+    └── wokwi-links.md                      ← templates e links Wokwi por aula
 ```
 
 ---
@@ -85,3 +92,10 @@ minicurso-embarcados/
 ## Pré-requisito
 
 Saber criar um projeto no Wokwi com ESP32 e abrir o editor MicroPython.
+
+---
+
+## Material publicado
+
+- **GitHub Pages:** [https://rogeriomb-hub.github.io/minicurso_01-embarcados](https://rogeriomb-hub.github.io/minicurso_01-embarcados)
+- **Google Sites:** distribuído pelo professor em sala de aula.
