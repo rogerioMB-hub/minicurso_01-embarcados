@@ -66,6 +66,8 @@ Aplicado a LEDs: se cada bit corresponde a um LED, deslocar é fazer o LED "anda
 >           =  0b00001101        (bit 3 ligado; bits 0 e 2 preservados)
 > ```
 
+![Diagrama OR bit a bit — bit 3 acrescentado pela máscara, bits 0 e 2 preservados](../assets/diagrama_or_bit_a_bit.svg)
+
 ---
 
 ### Escrita direta em porta (registrador GPIO)
@@ -76,6 +78,8 @@ O ESP32 possui um registrador de hardware chamado **GPIO_OUT** que armazena o es
 Bit do registrador:   31  ...  18  ...   5   4   ...   2   1   0
 GPIO correspondente:  31  ...  18  ...   5   4   ...   2   1   0
 ```
+
+![Registrador GPIO_OUT do ESP32 — bits 2, 4, 5 e 18 ligados a LEDs](../assets/registrador_gpio_out_esp32_leds.svg)
 
 Escrever um valor nesse registrador atualiza **todos os pinos simultaneamente**, em uma única operação de hardware. Nenhum pino muda antes do outro.
 
