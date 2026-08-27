@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">escrever_palavra(0b1010) — as 4 iterações</title>
+  <desc id="desc">Comparação das quatro iterações, do bit selecionado até o estado dos LEDs ligados aos GPIOs 2, 4, 5 e 18.</desc>
+  <defs>
+    <style>
+      .mono { font-family: "JetBrains Mono", "DejaVu Sans Mono", Consolas, monospace; }
+      .title { font-size: 29px; font-weight: 700; fill: #172033; text-anchor: middle; }
+      .subtitle { font-size: 16px; fill: #5b687c; text-anchor: middle; }
+      .head { font-size: 22px; font-weight: 700; fill: #215f9e; text-anchor: middle; }
+      .gpio { font-size: 15px; fill: #4b596d; text-anchor: middle; }
+      .step { font-size: 15px; font-weight: 700; fill: #2878d0; }
+      .op { font-size: 13px; fill: #57657a; }
+      .bit-index { font-size: 11px; fill: #68758a; text-anchor: middle; }
+      .digit { font-size: 22px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+      .result { font-size: 14px; font-weight: 700; text-anchor: middle; }
+      .state { font-size: 15px; font-weight: 700; text-anchor: middle; }
+    </style>
+    <linearGradient id="ledRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7272"/><stop offset="45%" stop-color="#ef2525"/><stop offset="100%" stop-color="#961010"/>
+    </linearGradient>
+    <linearGradient id="ledOff" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d9dee5"/><stop offset="55%" stop-color="#aab2bd"/><stop offset="100%" stop-color="#747e8b"/>
+    </linearGradient>
+    <radialGradient id="redGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ff3030" stop-opacity=".38"/><stop offset="100%" stop-color="#ff3030" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1400" height="820" fill="#ffffff"/>
+  <text x="700" y="42" class="mono title">escrever_palavra(0b1010) — as 4 iterações</text>
+  <text x="700" y="69" class="mono subtitle">cada coluna mostra os 4 passos de uma iteração do for</text>
+
+  <!-- column headers -->
+  <g class="mono">
+    <text x="270" y="112" class="head">i = 0</text><text x="270" y="138" class="gpio">pino = pinos[0] = GPIO2</text>
+    <text x="580" y="112" class="head">i = 1</text><text x="580" y="138" class="gpio">pino = pinos[1] = GPIO4</text>
+    <text x="890" y="112" class="head">i = 2</text><text x="890" y="138" class="gpio">pino = pinos[2] = GPIO5</text>
+    <text x="1200" y="112" class="head">i = 3</text><text x="1200" y="138" class="gpio">pino = pinos[3] = GPIO18</text>
+  </g>
+
+  <!-- structural dividers -->
+  <g stroke="#dde3eb" stroke-width="1.5">
+    <line x1="425" y1="92" x2="425" y2="795"/><line x1="735" y1="92" x2="735" y2="795"/><line x1="1045" y1="92" x2="1045" y2="795"/>
+    <line x1="20" y1="304" x2="1380" y2="304"/><line x1="20" y1="474" x2="1380" y2="474"/><line x1="20" y1="623" x2="1380" y2="623"/>
+  </g>
+
+  <!-- row labels: first column side only -->
+  <g class="mono">
+    <text x="22" y="181" class="step">Passo 1</text><text x="22" y="203" class="op">palavra original</text><text x="22" y="222" class="op">0b1010</text>
+    <text x="22" y="335" class="step">Passo 2</text><text x="22" y="357" class="op">palavra &gt;&gt; i</text>
+    <text x="22" y="504" class="step">Passo 3</text><text x="22" y="526" class="op">&amp; 1</text><text x="22" y="545" class="op">isolar bit 0</text>
+    <text x="22" y="654" class="step">Passo 4</text><text x="22" y="676" class="op">pino.value</text><text x="22" y="695" class="op">(resultado)</text>
+  </g>
+
+  <!-- PASSO 1: original word, target bit highlighted per i -->
+  <g class="mono bit-index">
+    <text x="204" y="195">bit 3</text><text x="248" y="195">bit 2</text><text x="292" y="195">bit 1</text><text x="336" y="195">bit 0</text>
+    <text x="514" y="195">bit 3</text><text x="558" y="195">bit 2</text><text x="602" y="195">bit 1</text><text x="646" y="195">bit 0</text>
+    <text x="824" y="195">bit 3</text><text x="868" y="195">bit 2</text><text x="912" y="195">bit 1</text><text x="956" y="195">bit 0</text>
+    <text x="1134" y="195">bit 3</text><text x="1178" y="195">bit 2</text><text x="1222" y="195">bit 1</text><text x="1266" y="195">bit 0</text>
+  </g>
+  <g>
+    <!-- i0 -->
+    <rect x="182" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="226" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <rect x="270" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="314" y="205" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/>
+    <!-- i1 -->
+    <rect x="492" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="536" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <rect x="580" y="205" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/><rect x="624" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <!-- i2 -->
+    <rect x="802" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="846" y="205" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/>
+    <rect x="890" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="934" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <!-- i3 -->
+    <rect x="1112" y="205" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/><rect x="1156" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <rect x="1200" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="1244" y="205" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+  </g>
+  <g class="mono digit">
+    <text x="203" y="230" fill="#485568">1</text><text x="247" y="230" fill="#7a8492">0</text><text x="291" y="230" fill="#485568">1</text><text x="335" y="230" fill="#6b4b00">0</text>
+    <text x="513" y="230" fill="#485568">1</text><text x="557" y="230" fill="#7a8492">0</text><text x="601" y="230" fill="#6b4b00">1</text><text x="645" y="230" fill="#7a8492">0</text>
+    <text x="823" y="230" fill="#485568">1</text><text x="867" y="230" fill="#6b4b00">0</text><text x="911" y="230" fill="#485568">1</text><text x="955" y="230" fill="#7a8492">0</text>
+    <text x="1133" y="230" fill="#6b4b00">1</text><text x="1177" y="230" fill="#7a8492">0</text><text x="1221" y="230" fill="#485568">1</text><text x="1265" y="230" fill="#7a8492">0</text>
+  </g>
+  <g class="mono result" fill="#8a6000"><text x="270" y="278">seleciona bit 0</text><text x="580" y="278">seleciona bit 1</text><text x="890" y="278">seleciona bit 2</text><text x="1200" y="278">seleciona bit 3</text></g>
+
+  <!-- PASSO 2: shifted values; bit 0 always highlighted -->
+  <g>
+    <!-- i0 1010 -->
+    <rect x="182" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="226" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <rect x="270" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="314" y="366" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/>
+    <!-- i1 0101 -->
+    <rect x="492" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="536" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <rect x="580" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="624" y="366" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/>
+    <!-- i2 0010 -->
+    <rect x="802" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="846" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <rect x="890" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="934" y="366" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/>
+    <!-- i3 0001 -->
+    <rect x="1112" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="1156" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/>
+    <rect x="1200" y="366" width="42" height="48" rx="6" fill="#eef1f5" stroke="#c5ccd6"/><rect x="1244" y="366" width="42" height="48" rx="6" fill="#fff0b8" stroke="#dd8a00" stroke-width="2"/>
+  </g>
+  <g class="mono digit">
+    <text x="203" y="391" fill="#485568">1</text><text x="247" y="391" fill="#7a8492">0</text><text x="291" y="391" fill="#485568">1</text><text x="335" y="391" fill="#6b4b00">0</text>
+    <text x="513" y="391" fill="#7a8492">0</text><text x="557" y="391" fill="#485568">1</text><text x="601" y="391" fill="#7a8492">0</text><text x="645" y="391" fill="#6b4b00">1</text>
+    <text x="823" y="391" fill="#7a8492">0</text><text x="867" y="391" fill="#7a8492">0</text><text x="911" y="391" fill="#485568">1</text><text x="955" y="391" fill="#6b4b00">0</text>
+    <text x="1133" y="391" fill="#7a8492">0</text><text x="1177" y="391" fill="#7a8492">0</text><text x="1221" y="391" fill="#7a8492">0</text><text x="1265" y="391" fill="#6b4b00">1</text>
+  </g>
+  <g class="mono result" fill="#59677a"><text x="270" y="444">1010 &gt;&gt; 0 = 1010</text><text x="580" y="444">1010 &gt;&gt; 1 = 0101</text><text x="890" y="444">1010 &gt;&gt; 2 = 0010</text><text x="1200" y="444">1010 &gt;&gt; 3 = 0001</text></g>
+
+  <!-- PASSO 3: scalar result shown in bit-0 position -->
+  <g>
+    <!-- i0 -->
+    <rect x="182" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="226" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="270" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="314" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#aeb7c3" stroke-width="2"/>
+    <!-- i1 -->
+    <rect x="492" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="536" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="580" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="624" y="526" width="42" height="46" rx="6" fill="#d9f5e5" stroke="#218b52" stroke-width="2"/>
+    <!-- i2 -->
+    <rect x="802" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="846" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="890" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="934" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#aeb7c3" stroke-width="2"/>
+    <!-- i3 -->
+    <rect x="1112" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="1156" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="1200" y="526" width="42" height="46" rx="6" fill="#eef1f5" stroke="#d4dae2"/><rect x="1244" y="526" width="42" height="46" rx="6" fill="#d9f5e5" stroke="#218b52" stroke-width="2"/>
+  </g>
+  <g class="mono digit">
+    <text x="203" y="550" fill="#b7bec8">·</text><text x="247" y="550" fill="#b7bec8">·</text><text x="291" y="550" fill="#b7bec8">·</text><text x="335" y="550" fill="#687482">0</text>
+    <text x="513" y="550" fill="#b7bec8">·</text><text x="557" y="550" fill="#b7bec8">·</text><text x="601" y="550" fill="#b7bec8">·</text><text x="645" y="550" fill="#17653c">1</text>
+    <text x="823" y="550" fill="#b7bec8">·</text><text x="867" y="550" fill="#b7bec8">·</text><text x="911" y="550" fill="#b7bec8">·</text><text x="955" y="550" fill="#687482">0</text>
+    <text x="1133" y="550" fill="#b7bec8">·</text><text x="1177" y="550" fill="#b7bec8">·</text><text x="1221" y="550" fill="#b7bec8">·</text><text x="1265" y="550" fill="#17653c">1</text>
+  </g>
+  <g class="mono result"><text x="270" y="599" fill="#687482">resultado = 0</text><text x="580" y="599" fill="#17653c">resultado = 1</text><text x="890" y="599" fill="#687482">resultado = 0</text><text x="1200" y="599" fill="#17653c">resultado = 1</text></g>
+
+  <!-- PASSO 4: physical LEDs -->
+  <g>
+    <!-- off i0 -->
+    <g transform="translate(270 674)"><path d="M-8 38 V62 M8 38 V57" stroke="#9aa3ad" stroke-width="4" stroke-linecap="round"/><path d="M-17 37 H17 L14 42 H-14 Z" fill="#747e8b"/><path d="M-15 37 V19 A15 15 0 0 1 15 19 V37 Z" fill="url(#ledOff)" stroke="#68727e" stroke-width="2"/><path d="M-9 18 A9 9 0 0 1 5 10" fill="none" stroke="#fff" stroke-width="3" opacity=".5"/></g>
+    <!-- on i1 -->
+    <g transform="translate(580 674)"><circle cx="0" cy="20" r="34" fill="url(#redGlow)"/><path d="M-8 38 V62 M8 38 V57" stroke="#8d979f" stroke-width="4" stroke-linecap="round"/><path d="M-17 37 H17 L14 42 H-14 Z" fill="#a80f0f"/><path d="M-15 37 V19 A15 15 0 0 1 15 19 V37 Z" fill="url(#ledRed)" stroke="#8b1010" stroke-width="2"/><path d="M-9 18 A9 9 0 0 1 5 10" fill="none" stroke="#fff" stroke-width="3" opacity=".85"/><circle cx="0" cy="30" r="4" fill="#fff4f4" opacity=".9"/></g>
+    <!-- off i2 -->
+    <g transform="translate(890 674)"><path d="M-8 38 V62 M8 38 V57" stroke="#9aa3ad" stroke-width="4" stroke-linecap="round"/><path d="M-17 37 H17 L14 42 H-14 Z" fill="#747e8b"/><path d="M-15 37 V19 A15 15 0 0 1 15 19 V37 Z" fill="url(#ledOff)" stroke="#68727e" stroke-width="2"/><path d="M-9 18 A9 9 0 0 1 5 10" fill="none" stroke="#fff" stroke-width="3" opacity=".5"/></g>
+    <!-- on i3 -->
+    <g transform="translate(1200 674)"><circle cx="0" cy="20" r="34" fill="url(#redGlow)"/><path d="M-8 38 V62 M8 38 V57" stroke="#8d979f" stroke-width="4" stroke-linecap="round"/><path d="M-17 37 H17 L14 42 H-14 Z" fill="#a80f0f"/><path d="M-15 37 V19 A15 15 0 0 1 15 19 V37 Z" fill="url(#ledRed)" stroke="#8b1010" stroke-width="2"/><path d="M-9 18 A9 9 0 0 1 5 10" fill="none" stroke="#fff" stroke-width="3" opacity=".85"/><circle cx="0" cy="30" r="4" fill="#fff4f4" opacity=".9"/></g>
+  </g>
+  <g class="mono state"><text x="270" y="769" fill="#687482">APAGADO</text><text x="580" y="769" fill="#a80f0f">ACESO</text><text x="890" y="769" fill="#687482">APAGADO</text><text x="1200" y="769" fill="#a80f0f">ACESO</text></g>
+  <g class="mono gpio"><text x="270" y="793">GPIO2 · LED0</text><text x="580" y="793">GPIO4 · LED1</text><text x="890" y="793">GPIO5 · LED2</text><text x="1200" y="793">GPIO18 · LED3</text></g>
+</svg>
